@@ -3,13 +3,14 @@
    Ändra dem när salongsägaren har bestämt stilen – resten av sidan följer med. */
 
 :root {
-  --bakgrund: #faf7f2;
-  --yta: #ffffff;
-  --text: #2b2724;
-  --text-dampad: #6b625a;
-  --guld: #b08d57;
-  --guld-mork: #8a6a3b;
-  --linje: #e6ddd0;
+  --bakgrund: #2b2b2d;      /* mörkgrå */
+  --yta: #353538;           /* något ljusare grå för sektioner och kort */
+  --text: #f3efe8;
+  --text-dampad: #bdb6ac;
+  --guld: #fbc10f;          /* samma gula som logotypen */
+  --guld-mork: #f5cf5c;     /* ljusare guld för länkar mot mörk bakgrund */
+  --linje: #48484c;
+  --knapp-text: #2b2b2d;
 
   --typsnitt-rubrik: "Cormorant Garamond", Georgia, serif;
   --typsnitt-text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -57,8 +58,8 @@ p { margin: 0 0 1em; }
 
 /* Platshållare – syns tydligt så att inget glöms bort */
 .fyll-i {
-  background: #fff3c4;
-  color: #6b5200;
+  background: #4a4232;
+  color: #ffe9a8;
   padding: 0 0.3em;
   border-radius: 3px;
   font-style: normal;
@@ -79,13 +80,19 @@ p { margin: 0 0 1em; }
   padding-bottom: 1rem;
 }
 .logga {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
   font-family: var(--typsnitt-rubrik);
   font-size: 1.75rem;
   letter-spacing: 0.04em;
   color: var(--text);
   text-decoration: none;
 }
-.logga span { color: var(--guld); }
+.logga img { height: 44px; width: auto; }
+.sidfot .logga img { height: 36px; width: auto; }
+.logga .guldtext { color: var(--guld); }
 
 .meny ul {
   list-style: none;
@@ -108,21 +115,21 @@ p { margin: 0 0 1em; }
 /* ---------- Knappar ---------- */
 .knapp {
   display: inline-block;
-  background: var(--text);
-  color: var(--bakgrund);
+  background: var(--guld);
+  color: var(--knapp-text);
   text-decoration: none;
   padding: 0.85rem 1.6rem;
   border-radius: var(--radie);
   font-size: 0.95rem;
   letter-spacing: 0.03em;
 }
-.knapp:hover { background: var(--guld-mork); color: #fff; }
+.knapp:hover { background: var(--text); color: var(--knapp-text); }
 .knapp--ljus {
   background: transparent;
   color: var(--text);
   border: 1px solid var(--text);
 }
-.knapp--ljus:hover { background: var(--text); color: var(--bakgrund); }
+.knapp--ljus:hover { background: var(--text); color: var(--knapp-text); }
 
 /* ---------- Sektioner ---------- */
 .sektion { padding: 3.5rem 0; }
