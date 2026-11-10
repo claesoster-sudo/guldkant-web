@@ -30,3 +30,6 @@ bilder/             Optimerade bilder (webp/jpg, max ~300 kB styck)
 - Gör en commit per avgränsad ändring, så att det är lätt att backa.
 - Korta commit-meddelanden på svenska, t.ex. "Lägg till behandlingssida".
 - Den lokala kopian i C:\Guldkant\guldkant-web uppdateras med Fetch/Pull i GitHub Desktop. Skriv inte direkt i den lokala mappen, så att den inte hamnar i otakt med GitHub.
+
+## Cache
+- Stilmall och skript länkas med versionsnummer (`css/style.css?v=ÅÅÅÅMMDDttmm`, `js/meny.js?v=…`). Uppdatera numret i alla HTML-filer när style.css eller meny.js ändras, annars kan besökare se en gammal version i upp till 10 minuter.
