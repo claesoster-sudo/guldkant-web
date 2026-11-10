@@ -190,7 +190,38 @@ p { margin: 0 0 1em; }
   color: var(--text-dampad);
   font-size: 0.95rem;
 }
-.prislista .pris { white-space: nowrap; }
+.prislista .pris { white-space: nowrap; text-align: right; }
+.prislista .tid {
+  display: block;
+  color: var(--text-dampad);
+  font-size: 0.88rem;
+}
+.etikett {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid var(--guld);
+  border-radius: 999px;
+  color: var(--guld);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  vertical-align: 0.15em;
+}
+.kategorinav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Betyg */
+.betyg {
+  font-family: var(--typsnitt-rubrik);
+  font-size: 3rem;
+  color: var(--guld);
+  line-height: 1;
+  margin: 0 0 0.25rem;
+}
 
 /* Kontaktuppgifter */
 .uppgifter dt {
@@ -214,7 +245,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Större skärmar ---------- */
 @media (min-width: 48rem) {
-  .kortgrupp { grid-template-columns: repeat(3, 1fr); }
+  .kortgrupp { grid-template-columns: repeat(2, 1fr); }
   .tva-kolumner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -223,4 +254,7 @@ p { margin: 0 0 1em; }
   }
   .sidfot .behallare { grid-template-columns: repeat(3, 1fr); }
   .hjalte { padding: 6.5rem 0 5.5rem; }
+}
+@media (min-width: 64rem) {
+  .kortgrupp { grid-template-columns: repeat(4, 1fr); }
 }
