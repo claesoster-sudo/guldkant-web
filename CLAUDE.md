@@ -23,8 +23,10 @@ bilder/             Optimerade bilder (webp/jpg, max ~300 kB styck)
 - Tillgänglighet: alt-texter på bilder, tillräcklig kontrast, semantisk HTML.
 - Hitta inte på priser, öppettider eller kontaktuppgifter. Använd `[FYLL I]` och fråga.
 - Bokningsknappar länkar till den externa bokningstjänsten. Bygg inget eget bokningssystem.
-- Kör inte `git push` och ändra inte publiceringsinställningar utan att fråga.
+- Ändra inte publiceringsinställningar (GitHub Pages, domän) utan att fråga.
 
 ## Git
-- En gren per uppgift, t.ex. `feature/kontaktsida`. Slå ihop till `main` när ägaren godkänt.
+- Varje ändring committas och pushas direkt till `main`. Ägaren av repot vill inte sköta git själv.
+- Gör en commit per avgränsad ändring, så att det är lätt att backa.
 - Korta commit-meddelanden på svenska, t.ex. "Lägg till behandlingssida".
+- Den lokala kopian i C:\Guldkant\guldkant-web uppdateras med Fetch/Pull i GitHub Desktop. Skriv inte direkt i den lokala mappen, så att den inte hamnar i otakt med GitHub.
