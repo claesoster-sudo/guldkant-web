@@ -87,8 +87,10 @@ p { margin: 0 0 1em; }
   gap: 0.6rem;
   margin: 0;
   font-family: var(--typsnitt-rubrik);
-  font-size: 1.75rem;
-  letter-spacing: 0.04em;
+  font-size: 1.85rem;
+  font-weight: 300;        /* Cormorant Garamond Light Italic – valt 2026-11-10 */
+  font-style: italic;
+  letter-spacing: 0.02em;
   color: var(--text);
   text-decoration: none;
 }
