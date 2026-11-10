@@ -352,3 +352,39 @@ p { margin: 0 0 1em; }
 .sigill img { width: 6.5rem; height: auto; flex-shrink: 0; }
 .sigill p { margin: 0; font-size: 0.95rem; color: var(--text-dampad); }
 .portratt + .sigill { max-width: 26rem; margin-top: 1rem; }
+
+/* ---------- Fast sidhuvud och bokningsrad ---------- */
+.sidhuvud {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: transform 0.25s ease;
+}
+.sidhuvud.dold { transform: translateY(-100%); }
+[id] { scroll-margin-top: 6rem; }
+
+.bokaband { display: none; }
+@media (max-width: 47.99rem) {
+  .bokaband {
+    --bakgrund: #2f2a25;
+    --text: #efe6d8;
+    --knapp: #c39a62;
+    --knapp-text: #2f2a25;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom));
+    background: var(--bakgrund);
+    border-top: 1px solid #4b4239;
+  }
+  .bokaband .knapp { flex: 1; text-align: center; padding: 0.75rem 1rem; }
+  .bokaband .knapp--ljus { flex: 0 0 auto; }
+  body { padding-bottom: 4.75rem; }
+  .sidhuvud .behallare { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .sidhuvud .logga { font-size: 1.5rem; }
+  .sidhuvud .logga img { height: 38px; }
+}
