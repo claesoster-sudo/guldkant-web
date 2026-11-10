@@ -278,3 +278,47 @@ p { margin: 0 0 1em; }
 @media (min-width: 64rem) {
   .kortgrupp { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ---------- Bilder ---------- */
+.hjalte-rutnat {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+.hjalte-bild,
+.sektionsbild { margin: 0; }
+.hjalte-bild img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 34rem;
+  object-fit: cover;
+  border-radius: var(--radie);
+}
+.sektionsbild img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: var(--radie);
+  margin-top: 1rem;
+}
+.bildrad {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+.bildrad img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radie);
+}
+.ingress-text {
+  max-width: 40rem;
+  color: var(--text-dampad);
+}
+@media (min-width: 48rem) {
+  .hjalte-rutnat { grid-template-columns: 1.3fr 1fr; gap: 3.5rem; }
+  .bildrad { grid-template-columns: repeat(3, 1fr); }
+  .hjalte { padding: 4.5rem 0; }
+}
