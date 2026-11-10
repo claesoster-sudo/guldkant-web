@@ -1,0 +1,219 @@
+/* Guldkant – stilmall
+   Färger och typsnitt ligger som variabler här nedan.
+   Ändra dem när salongsägaren har bestämt stilen – resten av sidan följer med. */
+
+:root {
+  --bakgrund: #faf7f2;
+  --yta: #ffffff;
+  --text: #2b2724;
+  --text-dampad: #6b625a;
+  --guld: #b08d57;
+  --guld-mork: #8a6a3b;
+  --linje: #e6ddd0;
+
+  --typsnitt-rubrik: "Cormorant Garamond", Georgia, serif;
+  --typsnitt-text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --max-bredd: 64rem;
+  --radie: 6px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bakgrund);
+  color: var(--text);
+  font-family: var(--typsnitt-text);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--guld-mork); }
+a:hover { color: var(--text); }
+
+h1, h2, h3 {
+  font-family: var(--typsnitt-rubrik);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(2.4rem, 7vw, 3.75rem); }
+h2 { font-size: clamp(1.8rem, 4.5vw, 2.4rem); }
+h3 { font-size: 1.4rem; }
+
+p { margin: 0 0 1em; }
+
+.behallare {
+  width: 100%;
+  max-width: var(--max-bredd);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Platshållare – syns tydligt så att inget glöms bort */
+.fyll-i {
+  background: #fff3c4;
+  color: #6b5200;
+  padding: 0 0.3em;
+  border-radius: 3px;
+  font-style: normal;
+}
+
+/* ---------- Sidhuvud ---------- */
+.sidhuvud {
+  border-bottom: 1px solid var(--linje);
+  background: var(--bakgrund);
+}
+.sidhuvud .behallare {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.logga {
+  font-family: var(--typsnitt-rubrik);
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  text-decoration: none;
+}
+.logga span { color: var(--guld); }
+
+.meny ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+.meny a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+}
+.meny a:hover,
+.meny a[aria-current="page"] { border-bottom-color: var(--guld); }
+
+/* ---------- Knappar ---------- */
+.knapp {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bakgrund);
+  text-decoration: none;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radie);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+.knapp:hover { background: var(--guld-mork); color: #fff; }
+.knapp--ljus {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--text);
+}
+.knapp--ljus:hover { background: var(--text); color: var(--bakgrund); }
+
+/* ---------- Sektioner ---------- */
+.sektion { padding: 3.5rem 0; }
+.sektion--yta { background: var(--yta); }
+
+.hjalte { padding: 4.5rem 0 4rem; }
+.hjalte .ingress {
+  font-size: 1.15rem;
+  color: var(--text-dampad);
+  max-width: 36rem;
+}
+.knapprad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.overrubrik {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--guld-mork);
+  margin-bottom: 0.75rem;
+}
+
+/* Kort */
+.kortgrupp {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+.kort {
+  background: var(--yta);
+  border: 1px solid var(--linje);
+  border-radius: var(--radie);
+  padding: 1.5rem;
+}
+.sektion--yta .kort { background: var(--bakgrund); }
+
+/* Behandlingslista */
+.prislista {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--linje);
+}
+.prislista li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--linje);
+}
+.prislista .beskrivning {
+  display: block;
+  color: var(--text-dampad);
+  font-size: 0.95rem;
+}
+.prislista .pris { white-space: nowrap; }
+
+/* Kontaktuppgifter */
+.uppgifter dt {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.uppgifter dd { margin: 0.15rem 0 0; }
+
+/* ---------- Sidfot ---------- */
+.sidfot {
+  border-top: 1px solid var(--linje);
+  padding: 2.5rem 0;
+  color: var(--text-dampad);
+  font-size: 0.92rem;
+}
+.sidfot .behallare {
+  display: grid;
+  gap: 1.5rem;
+}
+.sidfot p { margin: 0; }
+
+/* ---------- Större skärmar ---------- */
+@media (min-width: 48rem) {
+  .kortgrupp { grid-template-columns: repeat(3, 1fr); }
+  .tva-kolumner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .sidfot .behallare { grid-template-columns: repeat(3, 1fr); }
+  .hjalte { padding: 6.5rem 0 5.5rem; }
+}
