@@ -1,6 +1,6 @@
 # Guldkant – hemsida
 
-Hemsida för Guldkant, en skönhetssalong. Ägaren bestämmer stil och innehåll. Planering och texter sker i Claude-projektet "Guldkant". Det här repot innehåller bara koden.
+Hemsida för Guldkant, en skönhetssalong. Ägaren bestämmer stil och innehåll. Planering, beslut och texter finns i det privata repot `claesoster-sudo/guldkant-planering` och tas fram i Claude Code. Det här repot innehåller bara koden och är publikt, så lägg inget här som inte får synas.
 
 ## Teknik
 - Statisk sajt: HTML, CSS och minimal vanilla JavaScript. Inga ramverk eller byggsteg om det inte uttryckligen bestäms.
